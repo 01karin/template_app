@@ -52,7 +52,7 @@
 			.login-item{
 				height:45px;
 				line-height:45px;
-				border:1px solid #dedede;
+				border:0.5px solid #dedede;
 				padding-left:15px;
 				margin:20px 0;
 			}

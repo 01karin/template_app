@@ -1,7 +1,7 @@
 <template>
   <div class="main">
   <p>主页</p>
-  <button @click="loginOut">退出</button>
+  <span class="out" @click="loginOut">退出</span>
   <div class="compent"><component :is="currentView"></component></div> 
    <div class="footer">
      <div class="footerNav" v-for="(item,index) in nav_menu_data" :key="index" :class="{active:index===0}" @click="pageChange($event,item.path)">
@@ -79,21 +79,22 @@
 </script>
 <style lang='less' scoped>
   @import  '../../public/comment.less';
-  .active{
-    color:#F3B700;
-    text-decoration:none;
-  }
   .main{
     width:100%;
     height:100%;
-    button{
+    .out{
+      display:inline-block;
       width:100px;
       border-radius:5px;
       height:40px;
       line-height:40px;
-      background:#333;
-      color:#fff;
+      border:1px solid @lightBlue;
+      color: @lightBlue;
+      font-size:0.3rem;
       text-align:center;
+      position:fixed;
+      top:0.1rem;
+      right:0.1rem;
     }
     .footer-container{
       position:fixed;
